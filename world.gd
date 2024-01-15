@@ -1,10 +1,9 @@
 extends Node2D
 
-@onready var children = get_tree().current_scene.get_children()
+@onready var planets = get_tree().current_scene.get_node("Planets").get_children()
 @onready var player = $Player
 
 var planet_positions = []
-var planets = []
 var direction_vectors = []
 
 
@@ -17,8 +16,6 @@ func _physics_process(delta):
 
 
 func get_planets_positions():
-	planets = children.duplicate()
-	planets.pop_at(children.find(player))
 	for planet in planets:
 		planet_positions.append(planet.global_position)
 
