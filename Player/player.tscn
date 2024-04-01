@@ -10,6 +10,7 @@ size = Vector2(9, 24)
 [node name="Player" type="CharacterBody2D"]
 safe_margin = 0.1
 script = ExtResource("1_8nuim")
+metadata/_edit_group_ = true
 
 [node name="SpaceShipSprite" type="Sprite2D" parent="."]
 texture = ExtResource("1_b0f5x")
@@ -24,4 +25,3 @@ position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_q5ps8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position_smoothing_enabled = true
